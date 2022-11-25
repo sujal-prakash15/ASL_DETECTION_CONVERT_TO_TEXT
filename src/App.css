@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+  background:linear-gradient(45deg,#6C1BAA,#213049);
+  min-height: 100vh;
+  color: white;
+  padding-left: 3rem;
+  position: relative;
+  z-index: 1;
+}
+/* for video bg */
+.videoTag{
+  position: fixed; 
+  z-index: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  float: left;
+  top: 0;
+  left: 0;
+  padding-top: none;
+  /* optional depending on what you want to do in your app */
+  }
+.App-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: flex-start;
+  text-shadow: 0px 0px 20px white;
+  font-size: calc(10px + 2vmin);
+  font-weight: 10px;
+  color: white;
+  /* font-family: Glitch Inside; */
+}
+.App-main{
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 1;
+  
+}
+.content{
+  float: left;
+  font-size: 7rem;
+  padding-top: 8rem;
+  text-align: justify;
+  text-shadow: 0px 0px 20px white;
+  font-weight: 400;
+}
+
+.btn{
+  background-color: transparent;
+  font-size: 1rem;
+  color: white;
+  border:2px solid white;
+  border-radius: 5px;
+  padding:1rem;
+}
+
+/* Adding CSS manually is only necessary in JSFiddle,
+   where CSS can't be inserted into the <head> */
+   .typed-cursor{
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite;
+  }
+  @keyframes typedjsBlink{
+    50% { opacity: 0.0; }
+  }
+  @-webkit-keyframes typedjsBlink{
+    0% { opacity: 1; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1; }
+  }
+  .typed-fade-out{
+    opacity: 0;
+    transition: opacity .25s;
+    -webkit-animation: 0;
+    animation: 0;
+  }

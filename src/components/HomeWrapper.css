@@ -1,0 +1,77 @@
+.content{
+  margin-top: 0rem;
+    font-size: 7rem;
+    padding-top: 5rem;
+    text-align: justify;
+    text-shadow: 0px 0px 0px white;
+    font-weight: 400;
+    opacity: none;
+    width: 100vw;
+    animation: cont 2s ease 2s infinite;
+  }
+  @keyframes cont {
+    50%{
+      text-shadow: 0px 0px 20px white;
+    }
+  }
+  @keyframes tres {
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0.5;
+    }
+    100%{
+      opacity: 1;
+    }
+    
+  }
+  
+  .btn{
+    background-color: transparent;
+    font-size: 2rem;
+    color: white;
+    border:2px solid white;
+    text-shadow: 0px 0px 0px white;
+    box-shadow: 0px 0px 0px white;;
+    border-radius: 5px;
+    padding:1rem;
+    animation: btn 2s ease 2s infinite;
+  }
+  .btn:hover{
+    text-shadow: 0px 0px 20px white;
+    box-shadow: 0px 0px 20px white;
+  }
+  @keyframes btn {
+    50%{
+      text-shadow: 0px 0px 20px white;
+      box-shadow: 0px 0px 20px white;
+    }
+
+    
+  }
+  .content2{
+    padding-top: 6rem;
+    padding-right: 8rem;
+  }
+  .wbcam{
+    position: "absolute";
+    margin-Left: "auto"; 
+    margin-Right: "auto";
+    left: 0;
+    right: 5rem;
+    text-Align: "center";
+    z-index: 2;
+    width:1280;
+    height: 720;
+    
+  }
+  .txtar{
+    background-color: transparent;
+    color: white;
+    font-size: 4rem;
+    border: none;
+    text-shadow: 0px 0px 20px white;
+    height: 30rem;
+    width: 30rem;
+  }
