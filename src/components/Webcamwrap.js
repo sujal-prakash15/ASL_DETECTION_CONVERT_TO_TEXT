@@ -6,6 +6,7 @@ import { loadGraphModel } from "@tensorflow/tfjs-converter";
 // 2. TODO - Import drawing utility here
 // e.g. import { drawRect } from "./utilities";
 import { drawRect } from "./utilities";
+import Speech from "speak-tts";
 import textfile from '../file.txt'
 const axios=require('axios').default
 
@@ -24,6 +25,7 @@ const Webwrap = (props) => {
   const [predic,setPredic]=useState();
   const[text,loadText]=useState("");
   const canvasRef = useRef(null);
+  const speakButton = document.getElementById("play");
   const mediaHandler = () => {
     setTimeout(() => setIsLoading(false), 1_000);
   };
@@ -40,6 +42,7 @@ const Webwrap = (props) => {
   useEffect(()=>{
     fetchData();
   },[])
+  
   //---------------------------
  
   //---------------------------------------------
@@ -116,11 +119,32 @@ const Webwrap = (props) => {
     runCoco();
   }, []);
 
+  const spk=()=>{
+    const speech=new Speech();
+    speech.init({
+      'volume': 1,
+         'lang': 'en-GB',
+         'rate': 1,
+         'pitch': 1,
+         'voice':'Google UK English Male',
+         'splitSentences': true,
+         'listeners': {
+             'onvoiceschanged': (voices) => {
+                 console.log("Event voiceschanged", voices)
+             }
+         }
+ })
+    
+    speech.speak({
+      text: predic,
+  })
+  }
   return (
     <Fragment>
       <span className="content">
         {/* {content} */}
          <textarea type="textarea" className="txtar" value={(isLoading)?content:predic}></textarea>
+         <button id='play' onClick={spk} className='btn'>Play</button><nobr/>
         <a onClick={props.Change}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
