@@ -1,5 +1,8 @@
 ### REACT APP ASL IMPLEMENTATION FOR CENTURITON2022
 
+###DevFolio Project Submission link:https://devfolio.co/projects/visioncors-asl-sign-interpreter-80fb
+###Live Demo Available at:https://dai.ly/klVkJ8TSeXRK2eyxqxP
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
